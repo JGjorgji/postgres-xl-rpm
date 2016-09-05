@@ -362,7 +362,6 @@ export LIBNAME=%{_lib}
 	--docdir=%{_docdir}
 
 make %{?_smp_mflags} world
-make %{?_smp_mflags} -C contrib all
 %if %uuid
 make %{?_smp_mflags} -C contrib/uuid-ossp all
 %endif
@@ -928,6 +927,9 @@ rm -rf %{buildroot}
 %endif
 
 %changelog
+* Mon Sep 05 2016 Gjorgji Jankovski <j.gjorgji@gmail.com> - 9.5-1.3
+- Adapt to 9.5 version
+
 * Sun May 19 2013 ViVek Raghuwanshi <vivek.r@stormdb.com> - 1.0.2-1PGDG
 - Updated to 1.0.2
 
